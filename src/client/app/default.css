@@ -26,12 +26,23 @@ ul.results {
   list-style-position:inside;
   list-style: none;
   display: block;
-  width: 466px;
-  padding: 6px;
+  width: 480px;
   border: #ddd solid;
   border-width: 0px 1px 1px 1px;
+  height: 28px;
+}
+
+.ban-search li:hover, .ban-search li.active {
+  background-color: #ddd;
 }
 
 .ban-search li:first-of-type {
   border-top-width: 1px;
+}
+
+.ban-search li a {
+  text-decoration: none;
+  display: block;
+  color:inherit;
+  padding: 6px;
 }
