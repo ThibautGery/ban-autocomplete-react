@@ -16,3 +16,9 @@ Development
 
  * Node
  * NPM
+
+
+### Commands
+
+ * Rebuild the component every time the sources change : `npm run dev`
+ * Build the component : `npm run build`
