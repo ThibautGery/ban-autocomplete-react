@@ -7,7 +7,7 @@ class App extends React.Component {
     return (
       <div class="example">
         <h1> Exemple d'autocomplétion de la BAN</h1>
-        <AutocompleteBan />
+        <AutocompleteBan maxResults={ 15 } minCharacters={ 4 } />
       </div>);
   }
 }
