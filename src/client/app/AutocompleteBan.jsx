@@ -1,4 +1,5 @@
 import React from 'react';
+import AutocompleteResult from './AutocompleteResult.jsx';
 
 
 class AutocompleteBan extends React.Component {
@@ -28,12 +29,12 @@ class AutocompleteBan extends React.Component {
   }
 
   render() {
-    return (<div class="search">
+    return (<div class="ban-search">
       <input  type="text"
                       value={this.state.value}
                       onChange={this.handleChange}
                       onKeyUp={this.getResults} />
-
+                    <AutocompleteResult />
     </div>);
   }
 
