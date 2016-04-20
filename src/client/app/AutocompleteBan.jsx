@@ -6,9 +6,13 @@ class AutocompleteBan extends React.Component {
     super(props);
   }
 
+  getResults() {
+    console.log('ON KEY UP PRESSED')
+  }
+
 
   render() {
-    return (<input type="text" />);
+    return (<input type="text" onKeyUp={this.getResults} />);
   }
 
 }
