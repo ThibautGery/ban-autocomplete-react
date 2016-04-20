@@ -4,14 +4,29 @@ class AutocompleteResult extends React.Component {
 
   constructor(props) {
     super(props);
+    this.renderItem = this.renderItem.bind(this)
   }
 
   renderItem(item) {
-    return <li>{ item.properties.context }, { item.properties.name } </li>;
-  };
+    return (
+      <li>
+        <a  href="#"
+            onClick={(e) => {this.props.selectResult(item.properties.id)}}>
+          { item.properties.name }, { item.properties.context }
+        </a>
+      </li>);
+  }
 
+  selectOption(id) {
+    return (e) => {
+      this.props.selectResult()
+    }
+  }
   render() {
-    return <ul className="results">{ this.props.results.map(this.renderItem) }</ul>;
+    return (
+      <ul className="results">
+        { this.props.results.map(this.renderItem) }
+      </ul>);
   }
 
 }

@@ -9,6 +9,7 @@ class AutocompleteBan extends React.Component {
     this.state = { query: "", results: [] };
     this.handleChange = this.handleChange.bind(this)
     this.getResults = this.getResults.bind(this)
+    this.selectResult = this.selectResult.bind(this)
   }
 
   getResults() {
@@ -30,13 +31,24 @@ class AutocompleteBan extends React.Component {
     this.setState({ query: event.target.value });
   }
 
+  selectResult(id) {
+    const getById = (item) => { return item.properties.id === id }
+    const currentResult = this.state.results.filter(getById)[0]
+    const currentAddressTemplated = this.templateQuery(currentResult)
+    this.setState({results: [], query: currentAddressTemplated })
+  }
+
+  templateQuery(address) {
+    return address.properties.name + ' ' + address.properties.context
+  }
+
   render() {
     return (<div className="ban-search">
       <input className="searchBox" type="text"
-                      value={this.state.value}
+                      value={this.state.query}
                       onChange={this.handleChange}
                       onKeyUp={this.getResults} />
-                    <AutocompleteResult results={this.state.results}/>
+                    <AutocompleteResult results={this.state.results} selectResult={ this.selectResult }/>
     </div>);
   }
 
