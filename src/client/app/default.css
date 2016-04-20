@@ -28,5 +28,10 @@ ul.results {
   display: block;
   width: 466px;
   padding: 6px;
-  border: 1px #ccc solid;
+  border: #ddd solid;
+  border-width: 0px 1px 1px 1px;
+}
+
+.ban-search li:first-of-type {
+  border-top-width: 1px;
 }
