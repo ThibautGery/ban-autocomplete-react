@@ -13,7 +13,8 @@ class AutocompleteBan extends React.Component {
 
   getResults() {
     const query = this.state.query
-    const banRequest = new Request('http://api-adresse.data.gouv.fr/search/?q=' + query);
+    const limit = this.props.limit || 7
+    const banRequest = new Request('http://api-adresse.data.gouv.fr/search/?q=' + query + '&limit=' + limit);
     fetch(banRequest)
       .then((response) => {
         return response.json()
