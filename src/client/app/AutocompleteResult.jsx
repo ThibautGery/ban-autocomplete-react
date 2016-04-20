@@ -7,11 +7,11 @@ class AutocompleteResult extends React.Component {
   }
 
   renderItem(item) {
-    return <li class="result">{ item.properties.context }, { item.properties.name } </li>;
+    return <li>{ item.properties.context }, { item.properties.name } </li>;
   };
 
   render() {
-    return <ul class="results">{ this.props.results.map(this.renderItem) }</ul>;
+    return <ul className="results">{ this.props.results.map(this.renderItem) }</ul>;
   }
 
 }

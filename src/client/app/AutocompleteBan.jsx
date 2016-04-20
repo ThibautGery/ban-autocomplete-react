@@ -28,8 +28,8 @@ class AutocompleteBan extends React.Component {
   }
 
   render() {
-    return (<div class="ban-search">
-      <input  type="text"
+    return (<div className="ban-search">
+      <input className="searchBox" type="text"
                       value={this.state.value}
                       onChange={this.handleChange}
                       onKeyUp={this.getResults} />
