@@ -1,20 +1,19 @@
 import React from 'react';
 
-class AutocompleteBan extends React.Component {
+class AutocompleteResult extends React.Component {
 
   constructor(props) {
     super(props);
   }
 
-
+  renderItem(item) {
+    return <li class="result">{ item.properties.context }, { item.properties.name } </li>;
+  };
 
   render() {
-    return (<ul class="results">
-      <li class="result"><a href="#">result 1</a></li>
-      <li class="result"><a href="#">result 2</a></li>
-    </ul>);
+    return <ul class="results">{ this.props.results.map(this.renderItem) }</ul>;
   }
 
 }
 
-export default AutocompleteBan;
+export default AutocompleteResult;

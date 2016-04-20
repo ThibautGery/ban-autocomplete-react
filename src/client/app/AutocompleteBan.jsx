@@ -6,7 +6,7 @@ class AutocompleteBan extends React.Component {
 
   constructor(props) {
     super(props);
-    this.state = { query: "" };
+    this.state = { query: "", results: [] };
     this.handleChange = this.handleChange.bind(this)
     this.getResults = this.getResults.bind(this)
   }
@@ -15,16 +15,15 @@ class AutocompleteBan extends React.Component {
     const query = this.state.query
     const banRequest = new Request('http://api-adresse.data.gouv.fr/search/?q=' + query);
     fetch(banRequest)
-      .then(function(response) {
+      .then((response) => {
         return response.json()
       })
-      .then(function(json) {
-        console.log('result', json.features)
+      .then((json) => {
+        this.setState({results: json.features, query: this.state.query});
       });
   }
 
   handleChange(event) {
-    console.log('event.target', event.target.value)
     this.setState({ query: event.target.value });
   }
 
@@ -34,7 +33,7 @@ class AutocompleteBan extends React.Component {
                       value={this.state.value}
                       onChange={this.handleChange}
                       onKeyUp={this.getResults} />
-                    <AutocompleteResult />
+                    <AutocompleteResult results={this.state.results}/>
     </div>);
   }
 
