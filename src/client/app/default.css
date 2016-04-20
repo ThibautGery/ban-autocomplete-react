@@ -1,0 +1,31 @@
+body,div {
+  width: 100%;
+}
+
+#app {
+  font-family: sans-serif;
+}
+
+.ban-search {
+  width: 320 px;
+}
+
+.ban-search input {
+  font-size:18px;
+  width: 480px;
+}
+
+ul.results {
+  padding-left: 0px;
+  margin-top: 0px
+}
+.ban-search li {
+  color: #666;
+  font-size: 14px; 
+  list-style-position:inside;
+  list-style: none;
+  display: block;
+  width: 466px;
+  padding: 6px;
+  border: 1px #ccc solid;
+}
