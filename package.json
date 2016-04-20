@@ -12,11 +12,13 @@
     "react-dom": "15.0.1",
     "webpack": "1.13.0"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "webpack-dev-server": "1.14.1"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack -p",
-    "dev": "webpack -d --watch"
+    "dev": "node node_modules/.bin/webpack-dev-server --content-base src/client/"
   },
   "repository": {
     "type": "git",
