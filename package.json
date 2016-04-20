@@ -1,8 +1,8 @@
 {
   "name": "ban-autocomplete-react",
-  "version": "0.0.1",
-  "description": "Autocomplete for french adress",
-  "main": "index.js",
+  "version": "0.0.1-alpha1",
+  "description": "Autocomplete address widget that uses the French BAN database.",
+  "main": "src/client/app/AutocompleteBan.jsx",
   "dependencies": {
     "babel-core": "6.7.6",
     "babel-loader": "6.2.4",
@@ -23,11 +23,16 @@
     "url": "git+ssh://git@github.com/ThibautGery/ban-autocomplete-react.git"
   },
   "keywords": [
-    "adress",
+    "addresses",
     "ban",
     "autocomplete"
   ],
   "author": "thibaut.gery@gmail.com",
+  "contributors":[{
+    "name" : "Colin Maudry",
+    "email" : "colin@maudry.com",
+    "url" : "http://colin.maudry.com"
+    }],
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/ThibautGery/ban-autocomplete-react/issues"
