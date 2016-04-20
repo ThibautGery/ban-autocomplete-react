@@ -12,7 +12,8 @@ body,div {
 
 .ban-search input {
   font-size:18px;
-  width: 480px;
+  width: 474px;
+  padding: 6px;
 }
 
 ul.results {
@@ -21,7 +22,7 @@ ul.results {
 }
 .ban-search li {
   color: #666;
-  font-size: 14px; 
+  font-size: 14px;
   list-style-position:inside;
   list-style: none;
   display: block;
