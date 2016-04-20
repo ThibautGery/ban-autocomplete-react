@@ -12,8 +12,9 @@ body,div {
 
 .ban-search input {
   font-size:18px;
-  width: 480px;
+  width: 478px;
   padding: 6px;
+  border: 1px solid #666;
 }
 
 ul.results {
@@ -26,10 +27,10 @@ ul.results {
   list-style-position:inside;
   list-style: none;
   display: block;
-  width: 480px;
+  width: 476px;
   border: #ddd solid;
   border-width: 0px 1px 1px 1px;
-  height: 28px;
+  /*height: 28px;*/
 }
 
 .ban-search li:hover, .ban-search li.active {
