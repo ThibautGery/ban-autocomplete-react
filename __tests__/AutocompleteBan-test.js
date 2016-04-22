@@ -1,9 +1,9 @@
-jest.unmock('../src/client/app/AutocompleteBan.jsx');
+jest.unmock('../src/AutocompleteBan.jsx');
 
 import React from 'react';
 import ReactDOM from 'react-dom';
 import TestUtils from 'react-addons-test-utils';
-import AutocompleteBan from '../src/client/app/AutocompleteBan.jsx';
+import AutocompleteBan from '../src/AutocompleteBan.jsx';
 
 describe('AutocompleteBan', () => {
   let autocompleteBan;

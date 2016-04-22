@@ -1,9 +1,9 @@
-jest.unmock('../src/client/app/AutocompleteResult.jsx');
+jest.unmock('../src/AutocompleteResult.jsx');
 
 import React from 'react';
 import ReactDOM from 'react-dom';
 import TestUtils from 'react-addons-test-utils';
-import AutocompleteResult from '../src/client/app/AutocompleteResult.jsx';
+import AutocompleteResult from '../src/AutocompleteResult.jsx';
 
 describe('AutocompleteResult', () => {
   let autocompleteResult;
