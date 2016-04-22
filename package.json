@@ -15,6 +15,7 @@
   "devDependencies": {
     "babel-jest": "11.0.2",
     "chromedriver": "2.21.2",
+    "coveralls": "2.11.9",
     "jest": "0.1.40",
     "jest-cli": "11.0.2",
     "nightwatch": "0.8.18",
