@@ -1,6 +1,7 @@
 import React from 'react';
 import AutocompleteResult from './AutocompleteResult.jsx';
-
+import polyfill from 'es6-promise'
+import 'isomorphic-fetch'
 
 class AutocompleteBan extends React.Component {
 
