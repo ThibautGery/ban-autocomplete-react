@@ -18,10 +18,9 @@ class AutocompleteResult extends React.Component {
   }
 
   selectOption(id) {
-    return (e) => {
-      this.props.selectResult()
-    }
+    return () => { this.props.selectResult() }
   }
+  
   render() {
     return (
       <ul className="results">
