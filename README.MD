@@ -1,5 +1,7 @@
 Base adresse nationale autocomplete box (React)
 ======================
+[![Circle CI](https://circleci.com/gh/ThibautGery/ban-autocomplete-react.svg?style=svg)](https://circleci.com/gh/ThibautGery/ban-autocomplete-react)
+[![Coverage Status](https://coveralls.io/repos/github/ThibautGery/ban-autocomplete-react/badge.svg?branch=master)](https://coveralls.io/github/ThibautGery/ban-autocomplete-react?branch=master)
 
  > React component to autocomplete addresses using the [Base adresses nationale (BAN)  API](http://adresse.data.gouv.fr/api/).
 
