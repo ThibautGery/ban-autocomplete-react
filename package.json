@@ -13,13 +13,20 @@
     "webpack": "1.13.0"
   },
   "devDependencies": {
+    "babel-jest": "11.0.2",
     "chromedriver": "2.21.2",
+    "jest": "0.1.40",
+    "jest-cli": "11.0.2",
     "nightwatch": "0.8.18",
+    "react-addons-test-utils": "15.0.1",
     "selenium-server": "2.53.0",
     "webpack-dev-server": "1.14.1"
   },
   "scripts": {
-    "test": "nightwatch -e chrome",
+    "test-watch": "jest --watch",
+    "test": "jest --coverage",
+    "test-ci": "jest --json --coverage",
+    "test-integration": "nightwatch -e chrome",
     "build": "webpack -p",
     "dev": "node node_modules/.bin/webpack-dev-server --content-base src/client/"
   },
@@ -33,14 +40,23 @@
     "autocomplete"
   ],
   "author": "thibaut.gery@gmail.com",
-  "contributors":[{
-    "name" : "Colin Maudry",
-    "email" : "colin@maudry.com",
-    "url" : "http://colin.maudry.com"
-    }],
+  "contributors": [
+    {
+      "name": "Colin Maudry",
+      "email": "colin@maudry.com",
+      "url": "http://colin.maudry.com"
+    }
+  ],
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/ThibautGery/ban-autocomplete-react/issues"
+  },
+  "jest": {
+    "unmockedModulePathPatterns": [
+      "<rootDir>/node_modules/react",
+      "<rootDir>/node_modules/react-dom",
+      "<rootDir>/node_modules/react-addons-test-utils"
+    ]
   },
   "homepage": "https://github.com/ThibautGery/ban-autocomplete-react#readme"
 }
