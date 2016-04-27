@@ -47,7 +47,7 @@ import AutocompleteBan from 'ban-autocomplete-react';
 render(<AutocompleteBan/>, document.getElementById('widget-container'));
 ```
 
-See an example in [index.jsx](src/client/app/index.jsx).
+See an example in [index.jsx](examples/app/index.jsx).
 
 Development
 -----------
